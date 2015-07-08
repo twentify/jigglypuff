@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177D52E81B4BD130002F114F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 177D52E71B4BD130002F114F /* MainViewController.m */; };
+		177D52EB1B4BD143002F114F /* OMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 177D52EA1B4BD143002F114F /* OMenuViewController.m */; };
+		177D52F81B4C024F002F114F /* OItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 177D52F61B4C024F002F114F /* OItemTableViewCell.m */; };
+		177D52F91B4C024F002F114F /* OItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177D52F71B4C024F002F114F /* OItemTableViewCell.xib */; };
+		17F852791B4D276A00175842 /* OMenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F852781B4D276A00175842 /* OMenuManager.m */; };
+		17F8527C1B4D29DE00175842 /* OMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F8527B1B4D29DE00175842 /* OMenuItem.m */; };
 		74FC51021B4BC98000A111E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FC51011B4BC98000A111E6 /* main.m */; };
 		74FC51051B4BC98000A111E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FC51041B4BC98000A111E6 /* AppDelegate.m */; };
 		74FC510B1B4BC98000A111E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FC51091B4BC98000A111E6 /* Main.storyboard */; };
@@ -26,6 +32,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		177D52E61B4BD130002F114F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		177D52E71B4BD130002F114F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		177D52E91B4BD143002F114F /* OMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMenuViewController.h; sourceTree = "<group>"; };
+		177D52EA1B4BD143002F114F /* OMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMenuViewController.m; sourceTree = "<group>"; };
+		177D52F51B4C024F002F114F /* OItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OItemTableViewCell.h; sourceTree = "<group>"; };
+		177D52F61B4C024F002F114F /* OItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OItemTableViewCell.m; sourceTree = "<group>"; };
+		177D52F71B4C024F002F114F /* OItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OItemTableViewCell.xib; sourceTree = "<group>"; };
+		17F852771B4D276A00175842 /* OMenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMenuManager.h; sourceTree = "<group>"; };
+		17F852781B4D276A00175842 /* OMenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMenuManager.m; sourceTree = "<group>"; };
+		17F8527A1B4D29DE00175842 /* OMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMenuItem.h; sourceTree = "<group>"; };
+		17F8527B1B4D29DE00175842 /* OMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMenuItem.m; sourceTree = "<group>"; };
 		74FC50FC1B4BC98000A111E6 /* OMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FC51001B4BC98000A111E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FC51011B4BC98000A111E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +74,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		177D52E31B4BD0E7002F114F /* Controlller */ = {
+			isa = PBXGroup;
+			children = (
+				177D52E51B4BD10B002F114F /* Menu */,
+				177D52E41B4BD0FB002F114F /* Main */,
+			);
+			name = Controlller;
+			sourceTree = "<group>";
+		};
+		177D52E41B4BD0FB002F114F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				177D52E61B4BD130002F114F /* MainViewController.h */,
+				177D52E71B4BD130002F114F /* MainViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		177D52E51B4BD10B002F114F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				17F852761B4D274C00175842 /* Manager */,
+				177D52F41B4C022D002F114F /* Cell */,
+				177D52E91B4BD143002F114F /* OMenuViewController.h */,
+				177D52EA1B4BD143002F114F /* OMenuViewController.m */,
+				17F852771B4D276A00175842 /* OMenuManager.h */,
+				17F852781B4D276A00175842 /* OMenuManager.m */,
+				17F8527A1B4D29DE00175842 /* OMenuItem.h */,
+				17F8527B1B4D29DE00175842 /* OMenuItem.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		177D52F41B4C022D002F114F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				177D52F51B4C024F002F114F /* OItemTableViewCell.h */,
+				177D52F61B4C024F002F114F /* OItemTableViewCell.m */,
+				177D52F71B4C024F002F114F /* OItemTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		17F852761B4D274C00175842 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		74FC50F31B4BC98000A111E6 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +145,7 @@
 		74FC50FE1B4BC98000A111E6 /* OMenu */ = {
 			isa = PBXGroup;
 			children = (
+				177D52E31B4BD0E7002F114F /* Controlller */,
 				74FC51031B4BC98000A111E6 /* AppDelegate.h */,
 				74FC51041B4BC98000A111E6 /* AppDelegate.m */,
 				74FC51091B4BC98000A111E6 /* Main.storyboard */,
@@ -196,6 +264,7 @@
 			files = (
 				74FC510B1B4BC98000A111E6 /* Main.storyboard in Resources */,
 				74FC51101B4BC98000A111E6 /* LaunchScreen.xib in Resources */,
+				177D52F91B4C024F002F114F /* OItemTableViewCell.xib in Resources */,
 				74FC510D1B4BC98000A111E6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,8 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177D52F81B4C024F002F114F /* OItemTableViewCell.m in Sources */,
 				74FC51051B4BC98000A111E6 /* AppDelegate.m in Sources */,
+				177D52E81B4BD130002F114F /* MainViewController.m in Sources */,
+				17F8527C1B4D29DE00175842 /* OMenuItem.m in Sources */,
 				74FC51021B4BC98000A111E6 /* main.m in Sources */,
+				17F852791B4D276A00175842 /* OMenuManager.m in Sources */,
+				177D52EB1B4BD143002F114F /* OMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +486,7 @@
 				74FC51211B4BC98000A111E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74FC51221B4BC98000A111E6 /* Build configuration list for PBXNativeTarget "OMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +495,7 @@
 				74FC51241B4BC98000A111E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
