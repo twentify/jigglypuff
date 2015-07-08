@@ -20,7 +20,7 @@
 #pragma mark - build
 - (void)addMenuButton:(UIButton *)btn {
     isAnimationActive = NO;
-    btn.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.0];
+    //btn.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.0];
     isShowMenu = NO;
     [btn addTarget:self action:@selector(tappedMenuBtn:) forControlEvents:UIControlEventTouchUpInside];
     btnMenu = btn;
@@ -117,10 +117,13 @@
 
 - (void)selectedItem:(OMenuItem *)item {
     if (item) {
-        [self.delegate menuVC:menuVC didSelectItem:item];
-    }else {
-        [self hideMenu];
+        if ([self.delegate respondsToSelector:@selector(menuVC:didSelectItem:)]) {
+            [self.delegate menuVC:menuVC didSelectItem:item];
+        }
     }
+    
+    [self hideMenu];
+
 }
 
 - (void)hideMenuView:(BOOL)hidden {

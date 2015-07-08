@@ -31,11 +31,19 @@
 - (void)build {
     self.view.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
     
+    UITapGestureRecognizer* backgroundGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedBackgroundView:)];
+    backgroundGestureRecognizer.numberOfTapsRequired = 1;
+    UIView* containerView = [[UIView alloc] initWithFrame:self.view.frame];
+    containerView.backgroundColor =[[UIColor whiteColor] colorWithAlphaComponent:0.0f];
+    [containerView addGestureRecognizer:backgroundGestureRecognizer];
+    [self.view addSubview:containerView];
+
     isShowMenu = NO;
 
     CGFloat tableViewHeight = [self.itemsArr count] * 44;
     CGFloat originY = self.view.frame.size.height - tableViewHeight - 10 - 50;
     CGFloat originX = self.view.frame.size.width - 10 - 200;
+    
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(originX, originY, 200, tableViewHeight) style:UITableViewStylePlain];
     
@@ -46,7 +54,6 @@
 
     self.tableView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.0];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
     [self.view addSubview:self.tableView];
 
     
@@ -56,9 +63,7 @@
     if (self.itemsArr) {
         [self.tableView reloadData];
     }
-    UITapGestureRecognizer* backgroundGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedBackgroundView:)];
-    backgroundGestureRecognizer.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:backgroundGestureRecognizer];
+   
 }
 
 - (void)tappedBackgroundView :(id)sender {

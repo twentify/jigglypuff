@@ -12,5 +12,6 @@
 @interface MainViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *btnMenu;
+@property (nonatomic, weak) IBOutlet UILabel *lblMenuName;
 
 @end
