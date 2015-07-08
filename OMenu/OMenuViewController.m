@@ -29,7 +29,7 @@
 
 #pragma mark - build
 - (void)build {
-    self.view.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
+    self.view.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     
     UITapGestureRecognizer* backgroundGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedBackgroundView:)];
     backgroundGestureRecognizer.numberOfTapsRequired = 1;
@@ -41,9 +41,8 @@
     isShowMenu = NO;
 
     CGFloat tableViewHeight = [self.itemsArr count] * 44;
-    CGFloat originY = self.view.frame.size.height - tableViewHeight - 10 - 50;
-    CGFloat originX = self.view.frame.size.width - 10 - 200;
-    
+    CGFloat originX = self.cellAnimationFrame.origin.x - 200 + self.cellAnimationFrame.size.width;
+    CGFloat originY = self.cellAnimationFrame.origin.y - tableViewHeight - 5;
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(originX, originY, 200, tableViewHeight) style:UITableViewStylePlain];
     
