@@ -44,8 +44,7 @@
     }
 }
 - (void)loadCell {
-    //self.transform = CGAffineTransformMakeScale(0.5, 0.5);
-    
+
     if (self.menuItem) {
         [self uidesign];
         CGRect currentFrame = self.frame;

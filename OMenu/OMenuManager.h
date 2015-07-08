@@ -10,12 +10,10 @@
 #import "OMenuViewController.h"
 
 @class OMenuManager;
-@protocol OMenuViewDataSource <NSObject>
-@optional
 
+@protocol OMenuViewDataSource <NSObject>
 - (NSInteger)numberOfRowInMenuItems;
 - (OMenuItem *)menuManager :(OMenuManager *)manager menuItemForRow :(NSInteger)row;
-
 @end
 
 
@@ -25,16 +23,16 @@
 @optional
 - (void)menuVC :(OMenuViewController *)menuVC pressedMenuBtn :(UIButton *)btnMenu;
 - (void)menuVC :(OMenuViewController *)menuVC viewDidHide :(BOOL)isHide;
-
 @end
+
 
 @interface OMenuManager : NSObject
 
 @property (nonatomic, weak) id<OMenuViewDelegate> delegate;
 @property (nonatomic, weak) id<OMenuViewDataSource> dataSource;
-@property (nonatomic, strong) NSArray* itemNameArr;
+@property (nonatomic, strong) NSArray* itemNameArr; // u dont want to use OMenuItem
 
-- (void)addMenuButton :(UIButton *)btn;
+- (void)addMenuButton:(UIButton *)btn animation:(BOOL)animated; // Transform animation
 - (void)selectedItem :(OMenuItem *)item;
 - (void)hideMenuView :(BOOL)hidden;
 
