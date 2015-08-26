@@ -12,7 +12,7 @@ https://appetize.io/app/v2r5729w8q3f3xyrpf1d2vzk0w?device=iphone5s&scale=75&orie
 Documention :
 
 
-#import "OMenuManager.h"
+    #import "OMenuManager.h"
     
     manager = [[OMenuManager alloc] init];
     manager.delegate = self;
@@ -22,29 +22,29 @@ Documention :
     
     
 Data Source Methods
-  #pragma mark - menu datasource
-  - (NSInteger)numberOfRowInMenuItems {
-    return [itemsArr count];
-  }
+    #pragma mark - menu datasource
+    - (NSInteger)numberOfRowInMenuItems {
+        return [itemsArr count];
+    }
 
-  - (OMenuItem *)menuManager:(OMenuManager *)manager menuItemForRow:(NSInteger)row {
-    OMenuItem* item = [[OMenuItem alloc] init];
-    item.name = [itemsArr objectAtIndex:row];
-    [item defaultDesign];
-    return item;
-  }
+    - (OMenuItem *)menuManager:(OMenuManager *)manager menuItemForRow:(NSInteger)row {
+        OMenuItem* item = [[OMenuItem alloc] init];
+        item.name = [itemsArr objectAtIndex:row];
+        [item defaultDesign];
+        return item;
+    }
 
 Delegate Methods 
-  #pragma mark - menu delegate
-  - (void)menuVC:(OMenuViewController *)menuVC didSelectItem:(OMenuItem *)item {
+      #pragma mark - menu delegate
+      - (void)menuVC:(OMenuViewController *)menuVC didSelectItem:(OMenuItem *)item {
+        
+      }
+      - (void)menuVC:(OMenuViewController *)menuVC pressedMenuBtn:(UIButton *)btnMenu {
+        
+      }
     
-  }
-  - (void)menuVC:(OMenuViewController *)menuVC pressedMenuBtn:(UIButton *)btnMenu {
-    
-  }
-
-  - (void)menuVC:(OMenuViewController *)menuVC viewDidHide:(BOOL)isHide {
-    
-  }
+      - (void)menuVC:(OMenuViewController *)menuVC viewDidHide:(BOOL)isHide {
+        
+      }
 
   
